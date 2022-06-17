@@ -62,6 +62,11 @@ public class SfgDiApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
 
+		System.out.println("");
+		System.out.println("----------- Primary Example");
+		PrimaryExampleController primaryExampleController = (PrimaryExampleController) ctx.getBean("primaryExampleController");
+		System.out.println(primaryExampleController.sayHello());
+
 	}
 
 }
