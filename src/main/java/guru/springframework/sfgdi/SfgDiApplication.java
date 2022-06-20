@@ -15,6 +15,8 @@ public class SfgDiApplication {
 
 
 
+		/////////////////////////////////////////////////////////// Spring style /////////////////////////////////////////
+
 
 		MyController myController = (MyController) ctx.getBean("myController");
 		MyController myController1 = (MyController) ctx.getBean("myController");
@@ -66,6 +68,18 @@ public class SfgDiApplication {
 		System.out.println("----------- Primary Example");
 		PrimaryExampleController primaryExampleController = (PrimaryExampleController) ctx.getBean("primaryExampleController");
 		System.out.println(primaryExampleController.sayHello());
+
+
+
+
+		/////////////////////////////////////////////////////////// Qualifier /////////////////////////////////////////
+		System.out.println("");
+		System.out.println("----------- Qualifier");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
+
+
+
 
 	}
 
