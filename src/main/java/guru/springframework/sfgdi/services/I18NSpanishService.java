@@ -6,8 +6,10 @@ import org.springframework.stereotype.Service;
 /**
  * Created by jt on 12/27/19.
  */
-@Profile({"ES", "default"})
-@Service("i18nService")
+
+// Skinuli smo service i @Profile anotaciju da bi pokazali kako se isto moze uraditi sa java konfiguracijom...
+//@Profile({"ES", "default"})
+//@Service("i18nService")
 public class I18NSpanishService implements GreetingService {
     @Override
     public String sayGreeting() {
