@@ -1,6 +1,7 @@
 package guru.springframework.sfgdi;
 
 import guru.springframework.sfgdi.config.SfgConfiguration;
+import guru.springframework.sfgdi.config.SfgConstructorConfig;
 import guru.springframework.sfgdi.controllers.*;
 import guru.springframework.sfgdi.datasource.FakeDataSource;
 import guru.springframework.sfgdi.services.PrototypeBean;
@@ -62,6 +63,10 @@ public class SfgDiApplication {
 		System.out.println("-------- Config Props" );
 		SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
 		System.out.println("Username read from class method is: " + sfgConfiguration.getUsername());
+
+		System.out.println("-------- Constructor Binding" );
+		SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+		System.out.println("Username read from class method is: " + sfgConstructorConfig.getUsername());
 
 	}
 
