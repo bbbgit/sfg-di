@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: cat,EN
+
+guru:
+  username: superuser-yml
