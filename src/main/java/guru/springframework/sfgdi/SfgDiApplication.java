@@ -1,5 +1,6 @@
 package guru.springframework.sfgdi;
 
+import guru.springframework.sfgdi.config.SfgConfiguration;
 import guru.springframework.sfgdi.controllers.*;
 import guru.springframework.sfgdi.datasource.FakeDataSource;
 import guru.springframework.sfgdi.services.PrototypeBean;
@@ -57,6 +58,10 @@ public class SfgDiApplication {
 		// Demo za import propertia iz fajla
 		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
 		System.out.println("Username read from file is: " + fakeDataSource.getUsername());
+
+		System.out.println("-------- Config Props" );
+		SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
+		System.out.println("Username read from class method is: " + sfgConfiguration.getUsername());
 
 	}
 
